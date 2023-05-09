@@ -19,14 +19,9 @@ class LoginController extends Controller
 
         if(Auth::user()->divisi == "IT"){
             return redirect('/dashboard');
+            }if (Auth::user()->divisi == "user"){
+                return redirect('Menu/clientlogin');
             }
-            if(Auth::user()->divisi == "marketing"){
-            return redirect('/Menu/clientlogin');
-            }
-            if(Auth::user()->divisi == "Supir"){
-                return redirect('/Menu/clientlogin');
-                }
-                
     }
 
     public function logout(){

@@ -7,7 +7,7 @@
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'UTC',
-    'locale' => 'en',
+    'locale' => 'id',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => 'base64:keKQUnxQfz8uByKfOlT/tJNxE/ENEO9iFnnENxTsWwY=',
@@ -177,7 +177,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -343,12 +343,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\app',
+        'root' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\app/public',
+        'root' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -365,7 +365,7 @@
     ),
     'links' => 
     array (
-      'C:\\xampp\\htdocs\\Helpdesk\\public\\storage' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\app/public',
+      'C:\\xampp\\htdocs\\helpdesk1-main\\public\\storage' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -399,13 +399,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -455,7 +455,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -512,7 +512,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\Helpdesk\\resources\\views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\helpdesk1-main\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -591,7 +591,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -611,9 +611,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Helpdesk\\resources\\views',
+      0 => 'C:\\xampp\\htdocs\\helpdesk1-main\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\Helpdesk\\storage\\framework\\views',
+    'compiled' => 'C:\\xampp\\htdocs\\helpdesk1-main\\storage\\framework\\views',
   ),
   'flare' => 
   array (

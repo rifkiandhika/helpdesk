@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <style>
     ul.table-action{
       list-style: none;
@@ -84,7 +83,64 @@
         </div>
       </li>
 
-      
+      <!-- Messages Dropdown Menu -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            Message Start
+            <div class="media">
+              <img src="" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm"></p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i></p>
+              </div>
+            </div>
+            Message End -->
+          <!-- </a> -->
+          <!-- <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+             Message Start -->
+            <!-- <div class="media">
+              <img src="{{asset('assets/dist/img/user8-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title"> -->
+                 
+                  <!-- <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span> -->
+                <!-- </h3> -->
+                <!-- <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div> -->
+            <!-- Message End
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            Message Start
+            <div class="media">
+              <img src="{{asset('assets/dist/img/user3-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+             <!-- Message End -->
+          <!-- </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li> --> 
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -170,7 +226,6 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
           </li>
@@ -302,28 +357,16 @@
                 <a href="/SuksesC" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
-            <!-- <div class="col-lg-3 col-6">
-                <div class="small-box bg-primary">
-                <div class="inner">
-                    <h3>{{$user}}</h3>
-
-                    <p>Karyawan</p>
-                </div>
-                <div class="icon">
-                    <i class="nav-icon fas fa-users"></i>
-                </div>
-                <a href="/KaryawanC" class="small-box-footer">.</a>
-                </div>
-            </div> -->
-            <!-- ./col -->
             </div>
             <!-- /.row -->
             <!-- Main row -->
-           
+            <img src="../views/layouts/user.png" alt="">
                 <!-- /.card -->
             </section>
+            <!-- right col -->
             </div>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
         </section>
   </div>
   <!-- /.content-wrapper -->

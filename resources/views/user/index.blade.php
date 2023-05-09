@@ -34,11 +34,6 @@
             <div class="card">
                 <div class="card-body">
                   <table class="table table-bordered table-striped">
-
-                  <div>
-                  <a class="btn btn-success" href="/Register">Buat Akun</a>
-                </div>
-                <hr>
                     <thead>
                       <tr>
                         <th>No</th>
