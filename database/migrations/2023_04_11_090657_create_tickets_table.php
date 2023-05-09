@@ -16,14 +16,16 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('keluhan');
+            $table->string('user')->nullable();
             $table->enum('status_ticket', ['Direspon','Selesai','Menunggu'])->default('Menunggu');
-            $table->longText('keterangan');
+            $table->enum('konfirmasi', ['Konfirmasi','Masukan Pesan','Ticket Selesai'])->default('Konfirmasi');
+            $table->string('keterangan');
             $table->string('tingkat_kesulitan')->nullable();
             $table->string('tempat');
-            $table->longText('image')->nullable();
-            $table->integer('user_id');
-            $table->string('divisi')->nullable();
+            $table->string('departemen')->nullable();
+            $table->string('image');
             $table->timestamps();
+            $table->string('tgl_penyelesaian')->nullable();
         });
     }
 

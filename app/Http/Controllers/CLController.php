@@ -15,8 +15,13 @@ class CLController extends Controller
         return view("Menu.clientlogin", compact('data', 'proses', 'success', 'user'));
     }
     
-    public function client(){
+    public function client(Request $request){
+        
         $data ["tickets"] = Ticket::all();
+        //filter by name
+        
+
+        
         return view("/Ticket/client", $data);
     }
 }

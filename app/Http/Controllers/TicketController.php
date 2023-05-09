@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Ticket;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class TicketController extends Controller
 {
@@ -16,41 +15,24 @@ class TicketController extends Controller
      */
     public function index()
     {
-        $data["tickets"] = Ticket::paginate(10);
+        $data["tickets"] = Ticket::all();
         return view("/Ticket/index", $data);
     }
 
     public function insert_data(Request $request)
     {
         $data=$request->validate([
-            'keluhan' => 'required|max:255',
+            'keluhan' => 'required',
             'keterangan' => 'required',
-            'divisi'=> 'required',
             'tempat'=> 'required',
-            'image'=> 'image|file'
+            'image'=> 'required'
         ]);
-        if ($files = $request->file('image')) {
-            $extension = $files->getClientOriginalExtension();
-            $name = hash('sha256', time()) . '.' . $extension;
-            $files->move('gambarticket', $name);
-            Ticket::create([
-                'keluhan'=> $request->keluhan,
-                'keterangan'=> $request->keterangan,
-                'divisi'=> $request->divisi,
-                'tempat'=> $request->tempat,
-                'image'=> $name,
-                'user_id'=>$request->user,
-                'created_at'=> now()
-            ]);
-            return back()->with('status', 'Data Berhasil Dikirim');
-
-        }
+        ($data);
         Ticket::create([
             'keluhan'=> $request->keluhan,
             'keterangan'=> $request->keterangan,
-            'divisi' => $request-> divisi,
             'tempat'=> $request->tempat,
-            'user_id'=>$request->user,
+            'image'=> $request->image,
             'created_at'=> now()
         ]);
         return back()->with('status', 'Data Berhasil Dikirim');
@@ -70,9 +52,16 @@ class TicketController extends Controller
             'status_ticket'=>'Selesai'
         ])    
             ]);
-        return back()->with("tickets.status");
+            return back()->with("tickets.status");
+
+
 
     }
+
+    
+
+
+    
 
     
     
@@ -127,9 +116,11 @@ class TicketController extends Controller
 
 
     public function detail($id){
-        $data = Ticket::find($id);
+        $data["users"] = User::all();
         $data["tickets"] = Ticket::all();
-        return view('Ticket.detail',$data, compact('data'));
+        $data = User::find($id);
+        $data = Ticket::find($id);
+        return view('Ticket.detail', $data, compact('data'));
     }
 
     public function details($id){
@@ -137,7 +128,7 @@ class TicketController extends Controller
         $data["tickets"] = Ticket::all();
         $data = User::find($id);
         $data = Ticket::find($id);
-        return view('Ticket.detail',$data, compact('data'));
+        return view('Ticket.detail',$data ,compact('data'));
     }
 
     /**
@@ -147,11 +138,9 @@ class TicketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updata(Request $request, $id)
+    public function update(Request $request, $id)
     {
-        $data = Ticket::find($id);
-        $data->update($request->all());
-        return redirect()->route('/Ticket');
+        //
     }
 
     /**

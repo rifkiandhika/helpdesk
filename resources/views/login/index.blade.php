@@ -44,9 +44,11 @@
             </div>
           </div>
         </div>
+        
         <div>
-          <a href="/Register">Create A new Account</a>
-        </div>
+                  <a class="btn btn-success" href="/Register">Buat Akun</a>
+                </div>
+                
         <br>
         <button type="submit" class="btn btn-primary btn-block">Sign In</button>
         <div class="row">

@@ -62,13 +62,14 @@
                         @if ($Ticket->status_ticket == "Menunggu")
                         <td><a href="/tickets/status/{{$Ticket->id}}/Proses" class="btn btn-warning" onclick="return confirm('Respon laporan?')">{{$Ticket->status_ticket}}</a></td>
 
+
                         @endif
                         @if ($Ticket->status_ticket == "Direspon")
                         <td><a href="/tickets/status/{{$Ticket->id}}/Selesai" class="btn btn-primary" onclick="return confirm('Selesaikan laporan?')">{{$Ticket->status_ticket}}</a></td>
 
                         @endif
                         @if ($Ticket->status_ticket == "Selesai")
-                        <td><a href="btn btn-success">{{$Ticket->status_ticket}}</a></td>
+                        <td><a class="btn btn-success">{{$Ticket->status_ticket}}</a></td>
 
                         @endif
                         <!-- <td>{{$Ticket->konfirmasi}}</td> -->
